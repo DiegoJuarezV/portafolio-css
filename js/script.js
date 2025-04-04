@@ -1,3 +1,4 @@
+
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
@@ -39,3 +40,59 @@ window.onscroll = () => {
 
   footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.info-btn').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      const projectId = btn.dataset.project;
+      showProjectInfo(projectId);
+    });
+  });
+  
+  function showProjectInfo(projectId) {
+    const projects = {
+      odontologos: {
+        title: 'Administrador de Odontólogos',
+        description: 'Este proyecto es un sistema de gestión para una clínica odontológica que permite registrar pacientes, odontólogos y turnos.',
+        techs: ['React.js', 'CSS', 'LocalStorage']
+      },
+      veterinaria: {
+        title: 'Registro Veterinaria',
+        description: 'Aplicación para registrar mascotas, dueños y consultas veterinarias. Ideal para clínicas pequeñas. Registra los sintomas y proporciona un ID único a cada uno de ellos.',
+        techs: ['React.js', 'Tailwind CSS', 'TypeScript', 'Zustand']
+      },
+      calorias: {
+        title: 'Control de Calorías',
+        description: 'App que permite llevar un control de calorías diarias mediante ingreso de alimentos y cantidades, y el ejercicio hecho a lo largo del día.',
+        techs: ['React.js', 'Tailwind CSS', 'LocalStorage']
+      },
+      gastos: {
+        title: 'Control de Gastos',
+        description: 'Herramienta para gestionar gastos personales y mensuales con visualización simple, dinámica y que proporciona un filtro con categorias para una busqueda más ágil del gasto ingresado.',
+        techs: ['React.js', 'Tailwind CSS', 'React-date-picker', 'headlessui']
+      }
+    };
+  
+    const project = projects[projectId];
+  
+    if (!project) return;
+  
+    const techList = project.techs.map(tech => `<li>${tech}</li>`).join('');
+  
+    Swal.fire({
+      title: project.title,
+      html: `
+        <p style="font-size: 1.3rem; margin-bottom: 1rem;">${project.description}</p>
+        <h2>Tecnologías usadas:</h2>
+        <ul style="text-align: left; font-size: 1.2rem; line-height: 1.6;">${techList}</ul>
+      `,
+      icon: 'info',
+      width: '50rem',
+      background: '#081b29',
+      color: '#ffffff',
+      confirmButtonColor: '#00abf0',
+      confirmButtonText: 'Cerrar'
+    });
+  }
+})
