@@ -149,7 +149,7 @@ section {
   position: relative;
   font-size: 1.6rem;
   margin: 2rem 0 4rem;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .btn-box {
@@ -337,6 +337,7 @@ span {
 .about-content p {
   position: relative;
   font-size: 1.6rem;
+  font-weight: 500;
   margin: 2rem 0 3rem;
 }
 
@@ -376,6 +377,10 @@ span {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out;
   overflow: hidden;
+}
+
+.project-card.hidden {
+  display: none;
 }
 
 .project-card:hover {
@@ -747,6 +752,13 @@ section:nth-child(odd) .animate.scroll,
   text-align: left;
   line-height: 1.6;
   list-style: disc;
+}
+
+.custom-swal-modal {
+  border: 2px solid #00abf0; /* o cualquier color que combine con tu diseño */
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 0 20px rgba(0, 171, 240, 0.2);
 }
 
 /*Media queries*/
