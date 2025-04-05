@@ -755,7 +755,8 @@ section:nth-child(odd) .animate.scroll,
 }
 
 .custom-swal-modal {
-  border: 2px solid #00abf0; /* o cualquier color que combine con tu diseño */
+  font-size: 1.5rem !important;
+  border: 2px solid #00abf0; 
   border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 0 20px rgba(0, 171, 240, 0.2);

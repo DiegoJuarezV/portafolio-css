@@ -260,14 +260,14 @@
   <section class="contact" id="contact">
     <h2 class="heading">Contacta<span>me!</span><span class="animate scroll" style="--i:1;"></span></h2>
 
-    <form action="">
+    <form id="contact-form" action="">
       <div class="input-box">
         <div class="input-field">
-          <input type="text" placeholder="Nombre Completo" required>
+          <input type="text" name="nombre" placeholder="Nombre/ Razón Social" required>
           <span class="focus"></span>
         </div>
         <div class="input-field">
-          <input type="text" placeholder="Email" required>
+          <input type="email" name="email" placeholder="Email" required>
           <span class="focus"></span>
         </div>
         <span class="animate scroll" style="--i:3;"></span>
@@ -275,18 +275,18 @@
 
       <div class="input-box">
         <div class="input-field">
-          <input type="number" placeholder="Número" required>
+          <input type="number" name="numero" placeholder="Número (opcional)">
           <span class="focus"></span>
         </div>
         <div class="input-field">
-          <input type="text" placeholder="Asunto" required>
+          <input type="text" name="asunto" placeholder="Asunto" required>
           <span class="focus"></span>
         </div>
         <span class="animate scroll" style="--i:5;"></span>
       </div>
 
       <div class="textarea-field">
-        <textarea name="" id="" cols="30" rows="10" placeholder="Tu mensaje" required></textarea>
+        <textarea name="mensaje" id="" cols="30" rows="10" placeholder="Mensaje..." required></textarea>
         <span class="focus"></span>
         <span class="animate scroll" style="--i:7;"></span>
       </div>
@@ -310,6 +310,10 @@
       <!--<span class="animate scroll" style="--i:3;"></span>-->
     </div>
   </footer>
+
+  <!--EMAIL-->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="js/email.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="js/script.js"></script>
