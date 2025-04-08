@@ -1,4 +1,3 @@
-
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
@@ -76,6 +75,11 @@ document.addEventListener('DOMContentLoaded', () => {
         title: 'Tabla de Consumo',
         description: 'La finalidad de este proyecto es mostrar el menú de comida ofrecida en un establecimiento donde podrás visualizar el total de la compra, agregar propina y eliminar lo agregado si asi lo deseas.',
         techs: ['React.js', 'Tailwind CSS', 'TypeScript']
+      },
+      music: {
+        title: 'Music Inc.',
+        description: 'Proyecto creado con JavaScript Vanilla, recreando un sitio de alojamiento de álbumes musicales, en el cual puedes ingresar tu nombre para mostrarlo en la parte inicial de la interfaz, así como intercambiar las vistas entre todos los álbumes disponibles y los marcados como favoritos mediante un botón dinámico.',
+        techs: ['JavaScript', 'HTML', 'CSS', 'LocalStorage']
       }
     };
   
